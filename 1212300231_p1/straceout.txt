@@ -1,0 +1,103 @@
+2288  execve("/home/chenshanshan/firstpp", ["/home/chenshanshan/firstpp"], [/* 60 vars */]) = 0
+启动firstapp进程
+2288  brk(0)                            = 0x8352000
+调用brk向内核申请空间，返回值为内存管理的起始地址
+2288  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+检验/etc/ld.so.nohwcap是否存在，得出路径名中的目录不存在
+2288  mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c6000
+使用mmap2函数进行匿名内存映射，以此来获取8192bytes内存空间，该空间起始地址为 0xb77c6000，匿名内存映射就是不涉及具体的文件名,避免了文件的创建及打开,很显然只能用于具有亲缘关系的进程间通信
+2288  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+
+2288  open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+调用open函数尝试打开/etc/ld.so.cache文件，返回文件描述符为3，也就是指向文件对象的指针数组current-> files-> fd_array或者current-> files-> fdtable.fd中新分配给文件的索引
+
+2288  fstat64(3, {st_mode=S_IFREG|0644, st_size=78301, ...}) = 0
+fstat64函数获取/etc/ld.so.cache文件信息
+
+2288  mmap2(NULL, 78301, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb77b2000
+调用mmap2函数将/etc/ld.so.cache文件映射至内存
+
+2288  close(3)                          = 0
+close关闭文件描述符为3指向的/etc/ld.so.cache文件
+
+2288  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+2288  open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+2288  read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+调用read，从/lib/i386-linux-gnu/libc.so.6该libc库文件中读取512bytes，即读取ELF头信息
+
+2288  fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+获取/lib/i386-linux-gnu/libc.so.6文件信息
+
+2288  mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7604000
+调用mmap2函数将/lib/i386-linux-gnu/libc.so.6文件映射至内存,该空间起始地址为 0xb7604000
+
+2288  mmap2(0xb77ac000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb77ac000
+按指定的映射起始地址映射内存
+
+2288  mmap2(0xb77af000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb77af000
+匿名映射，映射区不与任何文件关联
+
+2288  close(3)                          = 0
+关闭文件描述符为3指向的/lib/i386-linux-gnu/libc.so.6文件
+
+2288  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7603000
+进行匿名映射，分配内存空间
+2288  set_thread_area({entry_number:-1 -> 6, base_addr:0xb7603940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+2288  mprotect(0xb77ac000, 8192, PROT_READ) = 0
+使用mprotect函数对0xb77ac000,起始的8192bytes空间进行保护，将这块内存变成只读
+2288  mprotect(0x8049000, 4096, PROT_READ) = 0
+同上
+2288  mprotect(0xb77ec000, 4096, PROT_READ) = 0
+同上
+2288  munmap(0xb77b2000, 78301)         = 0
+调用munmap函数，将/etc/ld.so.cache文件从内存中去映射
+2288  fstat64(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+2288  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c5000
+2288  fstat64(0, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+2288  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c4000
+2288  write(1, "Hello world,this is Linux!>", 27) = 27
+write 系统调用，输出 "Hello world, this is Linux
+2288  read(0, "lib\n", 1024)            = 4
+read 系统调用，输入 "lib\n"
+2288  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb76039a8) = 2316
+clone 系统调用，fork 产生一个子进程
+2288  wait4(-1,  <unfinished ...>
+wait4 系统调用，等待子进程结束
+2316  execve("/usr/local/sbin/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+execve 系统调用，执行 "/usr/local/sbin/lib\n"字符串对应的文件路径，对应代码execlp(cmd,NULL);
+2316  execve("/usr/local/bin/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  execve("/usr/sbin/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  execve("/usr/bin/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  execve("/sbin/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  execve("/bin/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  execve("/usr/games/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  execve("/usr/local/games/lib\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)
+同上
+2316  dup(2)                            = 3
+2316  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)
+2316  brk(0)                            = 0x8352000
+2316  brk(0x8373000)                    = 0x8373000
+2316  fstat64(3, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...}) = 0
+2316  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c3000
+2316  _llseek(3, 0, 0xbfe14620, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+2316  write(3, "lib\n", 4)              = 4
+write系统调用，输出"lib\n"
+2316  write(3, ": No such file or directory\n", 28) = 28
+write系统调用，输出"": No such file or directory\n"
+2316  close(3)                          = 0
+2316  munmap(0xb77c3000, 4096)          = 0
+2316  exit_group(2)                     = ?
+2316  +++ exited with 2 +++
+2288  <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 2}], 0, NULL) = 2316
+2288  --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2316, si_status=2, si_utime=0, si_stime=0} ---
+2288  write(1, "child process return 512 \n", 26) = 26
+write系统调用，输出"": child process return 512 \n"
+2288  write(1, ">", 1)                  = 1
+write系统调用,输出">",对应代码的printf(">");
+

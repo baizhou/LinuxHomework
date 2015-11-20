@@ -1,0 +1,108 @@
+{\rtf1\ansi\deff0{\fonttbl{\f0\fnil\fcharset134 \'cb\'ce\'cc\'e5;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\lang2052\f0\fs22 2288  execve("/home/chenshanshan/firstpp", ["/home/chenshanshan/firstpp"], [/* 60 vars */]) = 0\par
+\'c6\'f4\'b6\'affirstapp\'bd\'f8\'b3\'cc\par
+2288  brk(0)                            = 0x8352000\par
+\'b5\'f7\'d3\'c3brk\'cf\'f2\'c4\'da\'ba\'cb\'c9\'ea\'c7\'eb\'bf\'d5\'bc\'e4\'a3\'ac\'b7\'b5\'bb\'d8\'d6\'b5\'ce\'aa\'c4\'da\'b4\'e6\'b9\'dc\'c0\'ed\'b5\'c4\'c6\'f0\'ca\'bc\'b5\'d8\'d6\'b7\par
+2288  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)\par
+\'bc\'ec\'d1\'e9/etc/ld.so.nohwcap\'ca\'c7\'b7\'f1\'b4\'e6\'d4\'da\'a3\'ac\'b5\'c3\'b3\'f6\'c2\'b7\'be\'b6\'c3\'fb\'d6\'d0\'b5\'c4\'c4\'bf\'c2\'bc\'b2\'bb\'b4\'e6\'d4\'da\par
+2288  mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c6000\par
+\'ca\'b9\'d3\'c3mmap2\'ba\'af\'ca\'fd\'bd\'f8\'d0\'d0\'c4\'e4\'c3\'fb\'c4\'da\'b4\'e6\'d3\'b3\'c9\'e4\'a3\'ac\'d2\'d4\'b4\'cb\'c0\'b4\'bb\'f1\'c8\'a18192bytes\'c4\'da\'b4\'e6\'bf\'d5\'bc\'e4\'a3\'ac\'b8\'c3\'bf\'d5\'bc\'e4\'c6\'f0\'ca\'bc\'b5\'d8\'d6\'b7\'ce\'aa 0xb77c6000\'a3\'ac\'c4\'e4\'c3\'fb\'c4\'da\'b4\'e6\'d3\'b3\'c9\'e4\'be\'cd\'ca\'c7\'b2\'bb\'c9\'e6\'bc\'b0\'be\'df\'cc\'e5\'b5\'c4\'ce\'c4\'bc\'fe\'c3\'fb,\'b1\'dc\'c3\'e2\'c1\'cb\'ce\'c4\'bc\'fe\'b5\'c4\'b4\'b4\'bd\'a8\'bc\'b0\'b4\'f2\'bf\'aa,\'ba\'dc\'cf\'d4\'c8\'bb\'d6\'bb\'c4\'dc\'d3\'c3\'d3\'da\'be\'df\'d3\'d0\'c7\'d7\'d4\'b5\'b9\'d8\'cf\'b5\'b5\'c4\'bd\'f8\'b3\'cc\'bc\'e4\'cd\'a8\'d0\'c5\par
+2288  access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)\par
+\par
+2288  open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3\par
+\'b5\'f7\'d3\'c3open\'ba\'af\'ca\'fd\'b3\'a2\'ca\'d4\'b4\'f2\'bf\'aa/etc/ld.so.cache\'ce\'c4\'bc\'fe\'a3\'ac\'b7\'b5\'bb\'d8\'ce\'c4\'bc\'fe\'c3\'e8\'ca\'f6\'b7\'fb\'ce\'aa3\'a3\'ac\'d2\'b2\'be\'cd\'ca\'c7\'d6\'b8\'cf\'f2\'ce\'c4\'bc\'fe\'b6\'d4\'cf\'f3\'b5\'c4\'d6\'b8\'d5\'eb\'ca\'fd\'d7\'e9current-> files-> fd_array\'bb\'f2\'d5\'dfcurrent-> files-> fdtable.fd\'d6\'d0\'d0\'c2\'b7\'d6\'c5\'e4\'b8\'f8\'ce\'c4\'bc\'fe\'b5\'c4\'cb\'f7\'d2\'fd\par
+\par
+2288  fstat64(3, \{st_mode=S_IFREG|0644, st_size=78301, ...\}) = 0\par
+fstat64\'ba\'af\'ca\'fd\'bb\'f1\'c8\'a1/etc/ld.so.cache\'ce\'c4\'bc\'fe\'d0\'c5\'cf\'a2\par
+\par
+2288  mmap2(NULL, 78301, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb77b2000\par
+\'b5\'f7\'d3\'c3mmap2\'ba\'af\'ca\'fd\'bd\'ab/etc/ld.so.cache\'ce\'c4\'bc\'fe\'d3\'b3\'c9\'e4\'d6\'c1\'c4\'da\'b4\'e6\par
+\par
+2288  close(3)                          = 0\par
+close\'b9\'d8\'b1\'d5\'ce\'c4\'bc\'fe\'c3\'e8\'ca\'f6\'b7\'fb\'ce\'aa3\'d6\'b8\'cf\'f2\'b5\'c4/etc/ld.so.cache\'ce\'c4\'bc\'fe\par
+\par
+2288  access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)\par
+2288  open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3\par
+2288  read(3, "\\177ELF\\1\\1\\1\\0\\0\\0\\0\\0\\0\\0\\0\\0\\3\\0\\3\\0\\1\\0\\0\\0\\340\\233\\1\\0004\\0\\0\\0"..., 512) = 512\par
+\'b5\'f7\'d3\'c3read\'a3\'ac\'b4\'d3/lib/i386-linux-gnu/libc.so.6\'b8\'c3libc\'bf\'e2\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'c1\'c8\'a1512bytes\'a3\'ac\'bc\'b4\'b6\'c1\'c8\'a1ELF\'cd\'b7\'d0\'c5\'cf\'a2\par
+\par
+2288  fstat64(3, \{st_mode=S_IFREG|0755, st_size=1754876, ...\}) = 0\par
+\'bb\'f1\'c8\'a1/lib/i386-linux-gnu/libc.so.6\'ce\'c4\'bc\'fe\'d0\'c5\'cf\'a2\par
+\par
+2288  mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7604000\par
+\'b5\'f7\'d3\'c3mmap2\'ba\'af\'ca\'fd\'bd\'ab/lib/i386-linux-gnu/libc.so.6\'ce\'c4\'bc\'fe\'d3\'b3\'c9\'e4\'d6\'c1\'c4\'da\'b4\'e6,\'b8\'c3\'bf\'d5\'bc\'e4\'c6\'f0\'ca\'bc\'b5\'d8\'d6\'b7\'ce\'aa 0xb7604000\par
+\par
+2288  mmap2(0xb77ac000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb77ac000\par
+\'b0\'b4\'d6\'b8\'b6\'a8\'b5\'c4\'d3\'b3\'c9\'e4\'c6\'f0\'ca\'bc\'b5\'d8\'d6\'b7\'d3\'b3\'c9\'e4\'c4\'da\'b4\'e6\par
+\par
+2288  mmap2(0xb77af000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb77af000\par
+\'c4\'e4\'c3\'fb\'d3\'b3\'c9\'e4\'a3\'ac\'d3\'b3\'c9\'e4\'c7\'f8\'b2\'bb\'d3\'eb\'c8\'ce\'ba\'ce\'ce\'c4\'bc\'fe\'b9\'d8\'c1\'aa\par
+\par
+2288  close(3)                          = 0\par
+\'b9\'d8\'b1\'d5\'ce\'c4\'bc\'fe\'c3\'e8\'ca\'f6\'b7\'fb\'ce\'aa3\'d6\'b8\'cf\'f2\'b5\'c4/lib/i386-linux-gnu/libc.so.6\'ce\'c4\'bc\'fe\par
+\par
+2288  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7603000\par
+\'bd\'f8\'d0\'d0\'c4\'e4\'c3\'fb\'d3\'b3\'c9\'e4\'a3\'ac\'b7\'d6\'c5\'e4\'c4\'da\'b4\'e6\'bf\'d5\'bc\'e4\par
+2288  set_thread_area(\{entry_number:-1 -> 6, base_addr:0xb7603940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1\}) = 0\par
+2288  mprotect(0xb77ac000, 8192, PROT_READ) = 0\par
+\'ca\'b9\'d3\'c3mprotect\'ba\'af\'ca\'fd\'b6\'d40xb77ac000,\'c6\'f0\'ca\'bc\'b5\'c48192bytes\'bf\'d5\'bc\'e4\'bd\'f8\'d0\'d0\'b1\'a3\'bb\'a4\'a3\'ac\'bd\'ab\'d5\'e2\'bf\'e9\'c4\'da\'b4\'e6\'b1\'e4\'b3\'c9\'d6\'bb\'b6\'c1\par
+2288  mprotect(0x8049000, 4096, PROT_READ) = 0\par
+\'cd\'ac\'c9\'cf\par
+2288  mprotect(0xb77ec000, 4096, PROT_READ) = 0\par
+\'cd\'ac\'c9\'cf\par
+2288  munmap(0xb77b2000, 78301)         = 0\par
+\'b5\'f7\'d3\'c3munmap\'ba\'af\'ca\'fd\'a3\'ac\'bd\'ab/etc/ld.so.cache\'ce\'c4\'bc\'fe\'b4\'d3\'c4\'da\'b4\'e6\'d6\'d0\'c8\'a5\'d3\'b3\'c9\'e4\par
+2288  fstat64(1, \{st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...\}) = 0\par
+2288  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c5000\par
+2288  fstat64(0, \{st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...\}) = 0\par
+2288  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c4000\par
+2288  write(1, "Hello world,this is Linux!>", 27) = 27\par
+write \'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'ca\'e4\'b3\'f6 "Hello world, this is Linux\par
+2288  read(0, "lib\\n", 1024)            = 4\par
+read \'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'ca\'e4\'c8\'eb "lib\\n"\par
+2288  clone(child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb76039a8) = 2316\par
+clone \'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'acfork \'b2\'fa\'c9\'fa\'d2\'bb\'b8\'f6\'d7\'d3\'bd\'f8\'b3\'cc\par
+2288  wait4(-1,  <unfinished ...>\par
+wait4 \'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'b5\'c8\'b4\'fd\'d7\'d3\'bd\'f8\'b3\'cc\'bd\'e1\'ca\'f8\par
+2316  execve("/usr/local/sbin/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+execve \'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'d6\'b4\'d0\'d0 "/usr/local/sbin/lib\\n"\'d7\'d6\'b7\'fb\'b4\'ae\'b6\'d4\'d3\'a6\'b5\'c4\'ce\'c4\'bc\'fe\'c2\'b7\'be\'b6\'a3\'ac\'b6\'d4\'d3\'a6\'b4\'fa\'c2\'ebexeclp(cmd,NULL);\par
+2316  execve("/usr/local/bin/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  execve("/usr/sbin/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  execve("/usr/bin/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  execve("/sbin/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  execve("/bin/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  execve("/usr/games/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  execve("/usr/local/games/lib\\n", [], [/* 60 vars */]) = -1 ENOENT (No such file or directory)\par
+\'cd\'ac\'c9\'cf\par
+2316  dup(2)                            = 3\par
+2316  fcntl64(3, F_GETFL)               = 0x2 (flags O_RDWR)\par
+2316  brk(0)                            = 0x8352000\par
+2316  brk(0x8373000)                    = 0x8373000\par
+2316  fstat64(3, \{st_mode=S_IFCHR|0620, st_rdev=makedev(136, 0), ...\}) = 0\par
+2316  mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77c3000\par
+2316  _llseek(3, 0, 0xbfe14620, SEEK_CUR) = -1 ESPIPE (Illegal seek)\par
+2316  write(3, "lib\\n", 4)              = 4\par
+write\'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'ca\'e4\'b3\'f6"lib\\n"\par
+2316  write(3, ": No such file or directory\\n", 28) = 28\par
+write\'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'ca\'e4\'b3\'f6"": No such file or directory\\n"\par
+2316  close(3)                          = 0\par
+2316  munmap(0xb77c3000, 4096)          = 0\par
+2316  exit_group(2)                     = ?\par
+2316  +++ exited with 2 +++\par
+2288  <... wait4 resumed> [\{WIFEXITED(s) && WEXITSTATUS(s) == 2\}], 0, NULL) = 2316\par
+2288  --- SIGCHLD \{si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=2316, si_status=2, si_utime=0, si_stime=0\} ---\par
+2288  write(1, "child process return 512 \\n", 26) = 26\par
+\pard write\'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3\'a3\'ac\'ca\'e4\'b3\'f6"": child process return 512 \\n"\par
+\pard 2288  write(1, ">", 1)                  = 1\par
+write\'cf\'b5\'cd\'b3\'b5\'f7\'d3\'c3,\'ca\'e4\'b3\'f6">",\'b6\'d4\'d3\'a6\'b4\'fa\'c2\'eb\'b5\'c4printf(">");\par
+.\par
+.\par
+.\par
+}
+ 
